@@ -1,0 +1,50 @@
+html,body { 
+	height: 100vh; 
+}
+
+.global-container{
+	height:90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.card{
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 30px;  
+    box-shadow: 2px 4px 10px #6b5151, -2px 4px 10px #6b5151;
+    transition: all .3s;    
+
+}
+
+.card-title{ font-weight:300; }
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.alert{
+	margin-bottom:-30px;
+	font-size: 13px;
+	margin-top:20px;
+}
