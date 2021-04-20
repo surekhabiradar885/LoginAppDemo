@@ -10,7 +10,7 @@ import { AuthActions } from '../actions/action-types';
 @Injectable()
 export class AuthEffects {
     constructor(private actions$: Actions,
-        private router: Router) {
+                private router: Router) {
 
     }
     login$ = createEffect(() =>

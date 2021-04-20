@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { Store, } from '@ngrx/store';
 import { tap } from 'rxjs/operators';
-import {noop} from 'rxjs';
+import { noop } from 'rxjs';
 
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { User } from '../model/user';
 import { AppState } from '../../store/index';
@@ -17,7 +17,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   user: User = new User();
- // getState: Observable<any>;
+  // getState: Observable<any>;
   errorMessage: null;
   form: FormGroup;
 
@@ -27,21 +27,21 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private store: Store<AppState>){
-  //  this.getState = this.store.select(selectAuthState);
-  this.form = fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.minLength(6), Validators.maxLength(20)]]
-});
+    private store: Store<AppState>) {
+    //  this.getState = this.store.select(selectAuthState);
+    this.form = fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.minLength(6), Validators.maxLength(20)]]
+    });
 
 
   }
 
   ngOnInit(): void {
-  /*   this.getState.subscribe((state) => {
-      this.errorMessage = state.errorMessage;
-    }); */
-    }
+    /*   this.getState.subscribe((state) => {
+        this.errorMessage = state.errorMessage;
+      }); */
+  }
 
   onSubmit(): void {
 
@@ -50,20 +50,14 @@ export class LoginComponent implements OnInit {
     this.auth.login(payload)
       .pipe(
         tap((user: any) => {
-
-          console.log(user);
-
           this.store.dispatch(login({ user }));
           this.router.navigateByUrl('/home');
-
-
         })
       )
       .subscribe(
         // NO operation for succesful login
         noop,
         () => alert('Login Failed'),
-      //  this.store.dispatch(loginfailure({ error: 'Login Failed' }))
       );
   }
 }

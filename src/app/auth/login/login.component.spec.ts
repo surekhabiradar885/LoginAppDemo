@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store,StoreModule } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Routes,RouterModule  } from '@angular/router';
+import { Routes, RouterModule  } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { LoginComponent } from './login.component';
 import { AuthState } from '../../auth/reducers/index';
 import { AuthService } from '../../services/auth.service';
-import { reducers,metaReducers } from '../../store/index';
+import { reducers, metaReducers } from '../../store/index';
 
 class TestRouterComponent {
 }
 
-let config: Routes = [
+const config: Routes = [
     {
         path: '', component: TestRouterComponent
     }

@@ -10,7 +10,6 @@ import {AuthService} from '../services/auth.service';
 import * as fromAuth from './reducers';
 import { authReducer } from '../auth/reducers/index';
 import { authFeatureKey} from './reducers';
-// import {AuthGuard} from './auth.guard';
 import {EffectsModule} from '@ngrx/effects';
 import {AuthEffects} from '../store/effects/auth.effects';
 // import * as fromAuth from './reducers';

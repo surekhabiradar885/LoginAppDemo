@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## What to improve
 
-Route Guard of Ngrx can be implemented to authentificate/decide whether the user can or not access the component.Lazy loading feature modules can be implemented for improving the performence. There should be a forgot password option and cancel button on the login page. 
+Route Guard of Ngrx can be implemented to authentificate/decide whether the user can or not access the component. Lazy loading feature modules can be implemented for improving the performence. There should be a forgot password option and cancel button on the login page. 
 
 ## Further help
 
