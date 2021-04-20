@@ -20,9 +20,7 @@ import {AuthEffects} from '../store/effects/auth.effects';
         CommonModule,
         ReactiveFormsModule,
         RouterModule.forChild([{ path: '', component: LoginComponent }]),
-        StoreModule.forFeature(fromAuth.authFeatureKey, authReducer,
-          /*   { metaReducers: fromAuth.metaReducers } */),
-       // StoreModule.forFeature('auth', authReducer),
+        StoreModule.forFeature(fromAuth.authFeatureKey, authReducer),
         EffectsModule.forFeature([AuthEffects])
     ],
     declarations: [LoginComponent],
